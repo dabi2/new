@@ -1,4 +1,5 @@
 import 'package:borrowerapp/colors.dart';
+
 import 'package:flutter/material.dart';
 
 
@@ -6,7 +7,7 @@ class BottomNavigationBarCustom extends StatelessWidget {
   final void Function(int) onItemTapped;
   final int selectedIndex;
 
-  const BottomNavigationBarCustom({
+   const BottomNavigationBarCustom({
     Key? key,
     required this.onItemTapped ,
     required this.selectedIndex,
@@ -15,7 +16,7 @@ class BottomNavigationBarCustom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    return BottomNavigationBar(
+    return  BottomNavigationBar(
       
       backgroundColor: MainColors.appbar,
       unselectedItemColor: Colors.white,
@@ -35,14 +36,15 @@ class BottomNavigationBarCustom extends StatelessWidget {
           
         ),
       ],
+      onTap: onItemTapped,
       currentIndex: selectedIndex,
       selectedItemColor: Colors.black,
-      iconSize: 30,
-      onTap: onItemTapped ,
+      iconSize: 30,     
     );
     
   }
   
 }
+
 
  
