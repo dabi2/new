@@ -16,16 +16,21 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
+  List<Widget> widgetList = [
+    const Loan_Page(),
+    const HomePage(),
+    
+  ];
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
-      if (index == 1) {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => Loan_Page()),
-      );
-    }
+    //   if (index == 1) {
+    //   Navigator.push(
+    //     context,
+    //     MaterialPageRoute(builder: (context) => Loan_Page()),
+    //   );
+    // }
     });  
   }
 
