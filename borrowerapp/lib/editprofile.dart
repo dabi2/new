@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'primarybackgrouns.dart';
 import 'profilepage.dart';
 
 class Editprofile extends StatefulWidget {
