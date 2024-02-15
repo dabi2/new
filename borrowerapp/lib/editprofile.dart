@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'primarybackgrouns.dart';
+import 'profilepage.dart';
 
 class Editprofile extends StatefulWidget {
   const Editprofile({super.key});
@@ -14,23 +15,21 @@ class EditprofileState extends State<Editprofile> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-            onPressed: () => Navigator.of(context).pop,
+            onPressed: () {
+              Navigator.pop(
+                context,
+                MaterialPageRoute(builder: (context) => Userprofile())
+              );
+            },
             icon: Icon(
               Icons.arrow_back_ios_new,
-              color: Colors.white,
+              color: const Color.fromARGB(255, 0, 0, 0),
             ),
             
             ),
-        actions: [],
+        
       ),
-      body: Stack(
-        children: <Widget>[Primarybackgroundimage()],
-      ),
+      body: Text('hello')
     );
   }
 }
-// class Drawerclass{
-// Widget buildDrawer(BuildContext context) {
-//    return Drawer();
-//   };
-// }

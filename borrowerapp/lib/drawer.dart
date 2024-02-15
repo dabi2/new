@@ -1,7 +1,3 @@
-
-
-import 'dart:js';
-
 import 'package:borrowerapp/colors.dart';
 import 'package:flutter/material.dart';
 import 'editprofile.dart';
@@ -35,7 +31,7 @@ Widget buildDrawer(BuildContext context){
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Editprofile()),
+              MaterialPageRoute(builder: (context) => const Editprofile()),
             );           
           },
         ),

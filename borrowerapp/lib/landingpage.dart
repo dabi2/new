@@ -20,16 +20,16 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text('ITPL',style: TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.w900),)),
+        title: const Center(child: Text('ITPL',style: TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.w900),)),
         actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.notifications,color: Colors.white,)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.language,color: Colors.white,)),
+          IconButton(onPressed: (){}, icon: const Icon(Icons.notifications,color: Colors.white,)),
+          IconButton(onPressed: (){}, icon: const Icon(Icons.language,color: Colors.white,)),
         ],
         backgroundColor: MainColors.appbar,
         elevation: 8.0,
        
       ),
-      drawer: Drawerclass().drawerfunction,
+      drawer: Drawerclass().buildDrawer(context),
 
       
       
@@ -134,7 +134,7 @@ class _HomePageState extends State<HomePage> {
                         const Text('Check your credit score \n and much more',style: TextStyle(color: Colors.white),),
                         TextButton(onPressed: (){},
                         
-                         child:Row(
+                         child:const Row(
                           children: [
                             Text('Check Score',style: TextStyle(color: Colors.white),),
                             Icon(Icons.arrow_forward_outlined,size: 25,color: Colors.white,)

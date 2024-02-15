@@ -47,7 +47,7 @@ class _UserprofileState extends State<Userprofile> {
         backgroundColor: MainColors.appbar,
         elevation: 8.0,
       ),
-      drawer: Drawerclass().drawerfunction,
+      drawer: Drawerclass().buildDrawer(context),
       body: Stack(
         children: [
           Container(

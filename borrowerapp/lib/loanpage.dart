@@ -45,7 +45,7 @@ class _Loan_PageState extends State<Loan_Page> {
         backgroundColor: MainColors.appbar,
         elevation: 8.0,
       ),
-      drawer: Drawerclass().drawerfunction,
+      drawer: Drawerclass().buildDrawer(context),
       body: Column(
         children: [
           Stack(
