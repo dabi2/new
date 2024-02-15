@@ -15,24 +15,6 @@ class Loan_Page extends StatefulWidget {
 }
 
 class _Loan_PageState extends State<Loan_Page> {
-  // int _selectedIndex = 0;
-  // List<Widget> widgetList = [
-  //   const Loan_Page(),
-  //   const HomePage(),
-    
-  // ];
-  
-  // void _onItemTapped(int index) {
-  //   setState(() {
-  //     _selectedIndex = index;
-  //     if (index == 1) {
-  //       Navigator.push(
-  //         context,
-  //         MaterialPageRoute(builder: (context) => Loan_Page()),
-  //       );
-  //     }
-  //   });
-  // }
 
   @override
   Widget build(BuildContext context) {

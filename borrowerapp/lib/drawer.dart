@@ -1,8 +1,14 @@
+
+
+import 'dart:js';
+
 import 'package:borrowerapp/colors.dart';
 import 'package:flutter/material.dart';
+import 'editprofile.dart';
 
 class Drawerclass{
-  final Drawer drawerfunction = Drawer(
+Widget buildDrawer(BuildContext context){
+  return Drawer(
     backgroundColor: MainColors.body,
     
     child: ListView(
@@ -26,7 +32,12 @@ class Drawerclass{
           leading: const Icon(Icons.history,color: Colors.white,),
           title: const Text('Transactions History',style: TextStyle(color: Colors.white),),
           
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Editprofile()),
+            );           
+          },
         ),
         ListTile(
           leading: const Icon(Icons.settings,color: Colors.white,),
@@ -55,4 +66,5 @@ class Drawerclass{
       ],
     ),
   );
+}
 }
