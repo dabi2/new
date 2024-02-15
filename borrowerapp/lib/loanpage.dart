@@ -5,7 +5,7 @@ import 'bottomnavigator.dart';
 import 'drawer.dart';
 import 'colors.dart';
 import 'paynowbutton.dart';
-// import 'landingpage.dart';
+import 'landingpage.dart';
 
 class Loan_Page extends StatefulWidget {
   const Loan_Page({super.key});

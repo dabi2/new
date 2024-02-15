@@ -15,24 +15,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _selectedIndex = 0;
-  List<Widget> widgetList = [
-    const Loan_Page(),
-    const HomePage(),
-    
-  ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    //   if (index == 1) {
-    //   Navigator.push(
-    //     context,
-    //     MaterialPageRoute(builder: (context) => Loan_Page()),
-    //   );
-    // }
-    });  
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -191,8 +173,7 @@ class _HomePageState extends State<HomePage> {
                       child:  const Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Column(
-                          children: [
-                            
+                          children: [                            
                             Row(
                               
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -240,10 +221,10 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBarCustom(
-        onItemTapped: _onItemTapped,
-        selectedIndex: _selectedIndex,
-      ),
+      // bottomNavigationBar: BottomNavigationBarCustom(
+      //   onItemTapped: _onItemTapped,
+      //   selectedIndex: _selectedIndex,
+      // ),
     );
   }
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:borrowerapp/landingpage.dart';
+import 'profilepage.dart';
+import 'bottomnavigator.dart';
 
 
 
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Loan Application',
-      home: HomePage(),
+      home: Mybottomnavigationbar(),
     );    
   }
 }
