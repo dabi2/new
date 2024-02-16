@@ -1,6 +1,7 @@
 import 'package:borrowerapp/colors.dart';
 import 'package:flutter/material.dart';
 import 'editprofile.dart';
+import 'showtransactions.dart';
 
 class Drawerclass{
 Widget buildDrawer(BuildContext context){
@@ -21,7 +22,12 @@ Widget buildDrawer(BuildContext context){
         ListTile(
           leading: const Icon(Icons.person_add_alt_1,color: Colors.white,),
           title: const Text('Edit Profile',style: TextStyle(color: Colors.white),),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const Editprofile()),
+            );   
+          },
         ),
 
         ListTile(          
@@ -31,8 +37,8 @@ Widget buildDrawer(BuildContext context){
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const Editprofile()),
-            );           
+              MaterialPageRoute(builder: (context) => ShowtransactionsHistory())
+            );
           },
         ),
         ListTile(

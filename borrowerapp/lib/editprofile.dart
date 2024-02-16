@@ -25,7 +25,9 @@ class EditprofileState extends State<Editprofile> {
             Icons.arrow_back_ios_new,
             color: Colors.black,
           ),
+          splashColor: Colors.white,
         ),
+        title: const Text('Edit Profile',style: TextStyle(color: Colors.white),),
         actions: [
           IconButton(
             onPressed: () {},
@@ -38,7 +40,7 @@ class EditprofileState extends State<Editprofile> {
         backgroundColor: MainColors.appbar,
         elevation: 8.0,
       ),
-      drawer: Drawerclass().buildDrawer(context),
+      // drawer: Drawerclass().buildDrawer(context),
       body: Stack(
         children: [
           Container(

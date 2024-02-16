@@ -3,6 +3,7 @@ import 'package:borrowerapp/landingpage.dart';
 import 'profilepage.dart';
 import 'bottomnavigator.dart';
 import 'editprofile.dart';
+import 'showtransactions.dart';
 
 
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Loan Application',
-      home: Editprofile(),
+      home: Mybottomnavigationbar(),
     );    
   }
 }

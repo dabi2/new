@@ -21,13 +21,12 @@ class _Loan_PageState extends State<Loan_Page> {
     return Scaffold(
       backgroundColor: MainColors.body,
       appBar: AppBar(
-        title: const Center(
-          child: Text(
+        title: const Text(
             'Loan',
             style: TextStyle(
                 color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
           ),
-        ),
+        
         actions: [
           IconButton(
               onPressed: () {},
@@ -86,7 +85,7 @@ class _Loan_PageState extends State<Loan_Page> {
                 ),
                 child: Positioned(
                   child: Container(
-                    height: 185,
+                    
                     decoration: BoxDecoration(
                       borderRadius:
                           const BorderRadius.only(topRight: Radius.circular(90)),
@@ -109,32 +108,39 @@ class _Loan_PageState extends State<Loan_Page> {
                               child: Column(
                                 children: [
                                   const Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Icon(
-                                        Icons.home,
-                                        color: Colors.white,
-                                        size: 23,
-                                      ),
-                                      Text(
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.home,
+                                            color: Colors.white,
+                                            size: 23,
+                                          ),
+                                          Text(
                                         'Home Loan',
                                         style: TextStyle(
                                             fontSize: 16,
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold),
+                                      ), 
+                                        ],
                                       ),
-                                      SizedBox(
-                                        width: 150,
-                                      ),
-                                      Icon(
-                                        Icons.calendar_month_sharp,
-                                        color: Colors.white,
-                                        size: 15,
-                                      ),
-                                      Text(
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.calendar_month_sharp,
+                                            color: Colors.white,
+                                            size: 15,
+                                          ),
+                                          Text(
                                         'Due date 12/02/2024',
                                         style: TextStyle(
-                                            fontSize: 12, color: Colors.white),
+                                            fontSize: 12, color: Colors.grey),
                                       ),
+                                        ],
+                                      ),
+                                      
                                     ],
                                   ),
                                   const Divider(
@@ -199,36 +205,44 @@ class _Loan_PageState extends State<Loan_Page> {
                     color: MainColors.lightcontainer,
                   ),
                   child: Padding(
-                              padding: const EdgeInsets.all(25.0),
+                              padding: const EdgeInsets.all(8.0),
                               child: Column(
                                 children: [
                                   const Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Icon(
-                                        Icons.car_rental,
-                                        color: Colors.white,
-                                        size: 23,
-                                      ),
-                                      Text(
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.car_rental,
+                                            color: Colors.white,
+                                            size: 23,
+                                          ),
+                                          Text(
                                         'Car Loan',
                                         style: TextStyle(
                                             fontSize: 16,
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold),
                                       ),
-                                      SizedBox(
-                                        width: 150,
+                                        ],
                                       ),
-                                      Icon(
-                                        Icons.calendar_month_sharp,
-                                        color: Colors.white,
-                                        size: 15,
-                                      ),
-                                      Text(
+                                      
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.calendar_month_sharp,
+                                            color: Colors.white,
+                                            size: 15,
+                                          ),
+                                          Text(
                                         'Due date 12/02/2024',
                                         style: TextStyle(
-                                            fontSize: 12, color: Colors.white),
+                                            fontSize: 12, color: Colors.grey),
                                       ),
+                                        ],
+                                      ),
+                                      
                                     ],
                                   ),
                                   const Divider(
@@ -284,36 +298,43 @@ class _Loan_PageState extends State<Loan_Page> {
                     color: MainColors.lightcontainer,
                   ),
                   child: Padding(
-                              padding: const EdgeInsets.all(25.0),
+                              padding: const EdgeInsets.all(8.0),
                               child: Column(
+                                
                                 children: [
                                   const Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Icon(
-                                        Icons.school,
-                                        color: Colors.white,
-                                        size: 23,
-                                      ),
-                                      Text(
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.school,
+                                            color: Colors.white,
+                                            size: 23,
+                                          ),
+                                          Text(
                                         'Education Loan',
                                         style: TextStyle(
                                             fontSize: 16,
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold),
                                       ),
-                                      SizedBox(
-                                        width: 100,
+                                        ],
                                       ),
-                                      Icon(
-                                        Icons.calendar_month_sharp,
-                                        color: Colors.white,
-                                        size: 15,
-                                      ),
-                                      Text(
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.calendar_month_sharp,
+                                            color: Colors.white,
+                                            size: 15,
+                                          ),
+                                          Text(
                                         'Due date 12/02/2024',
                                         style: TextStyle(
-                                            fontSize: 12, color: Colors.white),
+                                            fontSize: 12, color: Colors.grey),
                                       ),
+                                        ],
+                                      ),                                      
                                     ],
                                   ),
                                   const Divider(
@@ -347,7 +368,7 @@ class _Loan_PageState extends State<Loan_Page> {
                                             'Pay Now',
                                             style:
                                                 TextStyle(color: Colors.white),
-                                          )),
+                                          ),),
                                     ],
                                   ),
                                 ],

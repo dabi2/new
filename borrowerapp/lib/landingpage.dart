@@ -47,10 +47,10 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Positioned(
-              top: 109,
-              width: 510,
+              top: 105,
+              // width: 510,
               child: Container(
-                width: 339,
+                
                 decoration: BoxDecoration(
                   // change this color to MainColors.body
                   color: MainColors.body,
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
                       const BorderRadius.only(topRight: Radius.circular(80)),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 45, left: 40, right: 40),
+                  padding: const EdgeInsets.all(8.0),
                   child: Container(
                     decoration: BoxDecoration(
                       color: MainColors.containercolor,
@@ -68,6 +68,19 @@ class _HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
                         children: [
+                          // Row(
+                          //   children: [
+                          //     RichText(text: TextSpan(
+                          //       children: <TextSpan>[
+                                  
+                          //         TextSpan(text: 'Get Loan offers up to '),
+                          //         TextSpan(text: '\u20B950,000',style: TextStyle(color: Colors.white,fontSize: 20)),
+                          //         TextSpan(text: '\n Complete Your Profile and work details and get best\n '),
+                          //         TextSpan(text: 'Loan Offers '),
+                          //       ]
+                          //     ))
+                          //   ],
+                          // ),
                           const Text(
                             'Get Loan Offers Up to \u20B950000',
                             style: TextStyle(
@@ -77,7 +90,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           const Padding(
                             padding: EdgeInsets.all(8.0),
-                            child: Center(
+                            child: Center(                            
                               child: Text(
                                 'Complete your profile and work details and get best loan offers',
                                 style: TextStyle(
@@ -119,19 +132,18 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 children: [
                   Container(
-                    height: 100,
-                    width: 400,
+                    height: 100,                    
                     decoration: BoxDecoration(
-                      color: MainColors.lightcontainer,
+                      color: MainColors.containercolor,
                       borderRadius: BorderRadius.circular(20),
                     ),
                     alignment: Alignment.centerRight,
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Image.asset('images/coins.png'),
-                        const Text('Check your credit score \n and much more',style: TextStyle(color: Colors.white),),
-                        TextButton(onPressed: (){},
-                        
+                        // const Text('Check your credit score \n and much more',style: TextStyle(color: Colors.white),),
+                        TextButton(onPressed: (){},                        
                          child:const Row(
                           children: [
                             Text('Check Score',style: TextStyle(color: Colors.white),),
