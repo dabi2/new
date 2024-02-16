@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:borrowerapp/landingpage.dart';
 import 'profilepage.dart';
 import 'bottomnavigator.dart';
+import 'editprofile.dart';
 
 
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Loan Application',
-      home: Mybottomnavigationbar(),
+      home: Editprofile(),
     );    
   }
 }

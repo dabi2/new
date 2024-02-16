@@ -52,7 +52,7 @@ class _UserprofileState extends State<Userprofile> {
         children: [
           Container(
             // constraints: BoxConstraints.expand(),
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('images/loanpage.png'),
                 // fit: BoxFit.cover, 
@@ -60,11 +60,11 @@ class _UserprofileState extends State<Userprofile> {
               ),
             ),
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: CircleAvatar(
                   maxRadius: 40,
                   child: Icon(
@@ -75,12 +75,12 @@ class _UserprofileState extends State<Userprofile> {
               )
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.all(100.0),
+          const Padding(
+            padding: EdgeInsets.all(100.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text(
+                Text(
                   'User Name',
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),

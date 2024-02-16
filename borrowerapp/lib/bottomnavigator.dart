@@ -1,5 +1,3 @@
-
-
 import 'landingpage.dart';
 import 'package:flutter/material.dart';
 import 'colors.dart';
@@ -38,7 +36,7 @@ class _MybottomnavigationbarState extends State<Mybottomnavigationbar> {
         onTap: (index) => setState(() {
           currentIndex = index;
         }),
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',

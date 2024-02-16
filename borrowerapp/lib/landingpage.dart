@@ -1,7 +1,5 @@
 import 'package:borrowerapp/colors.dart';
-import 'package:borrowerapp/loanpage.dart';
 import 'package:flutter/material.dart';
-import 'package:borrowerapp/bottomnavigator.dart';
 import 'package:borrowerapp/drawer.dart';
 
 
@@ -221,10 +219,6 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      // bottomNavigationBar: BottomNavigationBarCustom(
-      //   onItemTapped: _onItemTapped,
-      //   selectedIndex: _selectedIndex,
-      // ),
     );
   }
 }
