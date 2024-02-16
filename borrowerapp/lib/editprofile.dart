@@ -80,39 +80,109 @@ class EditprofileState extends State<Editprofile> {
             child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(top: 190,left: 34,right: 34,),
+                  padding: EdgeInsets.only(
+                    top: 190,
+                    left: 34,
+                    right: 34,
+                  ),
                   child: Card(
+                    color: Colors.transparent,
+                    
+                    
+                   
+                    child: Padding(
+                      padding: EdgeInsets.all(10.0),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                           Text('User Name'),
-                           Divider(
-                            color: Colors.black,
-                           ),
-                           SizedBox(
-                            width: 50,
-                            child: Text('text'),
-                           ),
-                           SizedBox(
-                            width: 50,
-                            child: Text('text'),
-                           ),
-                           SizedBox(
-                            width: 50,
-                            child: Text('text'),
-                           ),
-                           SizedBox(
-                            width: 50,
-                            child: Text('text'),
-                           ),
+                        children: <Widget>[
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [                              
+                              Text('User Name:',style: TextStyle(color: Colors.white,fontSize: 16),),
+                              Text('Kenneth',style: TextStyle(color: Colors.grey,fontSize: 12),),
+                            ],
+                          ),
+                          Divider(
+                            color: Colors.grey,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text('Email:',style: TextStyle(color: Colors.white,fontSize: 16),),
+                              Text('example@gmail.com',style: TextStyle(color: Colors.grey,fontSize: 12),),
+                            ],
+                          ),
+                          Divider(
+                            color: Colors.grey,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text('Pan Number:',style: TextStyle(color: Colors.white,fontSize: 16),),
+                              Text('COPVJ20RT',style: TextStyle(color: Colors.grey,fontSize: 12),),
+                            ],
+                          ),
+                          Divider(
+                            color: Colors.grey,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text('Date Of Birth:',style: TextStyle(color: Colors.white,fontSize: 16),),
+                              Text('**/**/1948',style: TextStyle(color: Colors.grey,fontSize: 12),),
+                            ],
+                          ),
+                          Divider(
+                            color: Colors.grey,
+                          ),
+                          
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text('Phone Number:',style: TextStyle(color: Colors.white,fontSize: 16),),
+                              Text('*******231',style: TextStyle(color: Colors.grey,fontSize: 12),),
+                            ],
+                          ),
+                          Divider(
+                            color: Colors.grey,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text('Address:',style: TextStyle(color: Colors.white,fontSize: 16),),
+                              Text('khanapara.NH7,plain,area',style: TextStyle(color: Colors.grey,fontSize: 12),),
+                            ],
+                          ),
+                          Divider(
+                            color: Colors.grey,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text('Employment Status:',style: TextStyle(color: Colors.white,fontSize: 16),),
+                              Text('Student',style: TextStyle(color: Colors.grey,fontSize: 12),),
+                            ],
+                          ),
+                          Divider(
+                            color: Colors.grey,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text('Monthly Income:',style: TextStyle(color: Colors.white,fontSize: 16),),
+                              Text('\u20B950,000',style: TextStyle(color: Colors.grey,fontSize: 12),),
+                            ],
+                          ),
+                          Divider(
+                            color: Colors.grey,
+                          ),
                         ],
-                      )
+                      ),
                     ),
+                  ),
                 ),
-              
               ],
             ),
-          ) 
+          )
         ],
       ),
     );
