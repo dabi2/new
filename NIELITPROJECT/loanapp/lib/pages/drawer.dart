@@ -1,6 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 // import 'package:loanapp/USER/signin.dart';
 import 'package:loanapp/colors/color.dart';
+import 'package:loanapp/loginscreens/signin_screen.dart';
 // import 'editprofile.dart';
 // import 'showtransactions.dart';
 
@@ -66,6 +69,9 @@ Widget buildDrawer(BuildContext context){
           leading: const Icon(Icons.logout_rounded,color: Colors.white,),
           title: const Text('Logout',style: TextStyle(color: Colors.white),),
           onTap: () {
+            FirebaseAuth.instance.signOut().then((value) {
+             Navigator.push(context,MaterialPageRoute(builder: (context) => SignInScreen())); 
+            });
             // Navigator.push(context,MaterialPageRoute(builder: (context) => Signinscreen()));
           },
         ),
