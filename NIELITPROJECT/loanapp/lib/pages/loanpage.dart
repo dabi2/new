@@ -70,7 +70,7 @@ class _LoanpageState extends State<Loanpage> {
               child: Column(
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.all(50),
+                padding: const EdgeInsets.all(8.0),
                 child: Center(
                     child: Text(
                   'Total Loan Amount: \u20B950,000',

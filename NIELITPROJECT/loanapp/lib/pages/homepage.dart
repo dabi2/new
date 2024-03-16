@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:loanapp/colors/color.dart';
+import 'package:loanapp/pages/applyloann.dart';
 import 'package:loanapp/pages/checkscore.dart';
 import 'package:loanapp/pages/drawer.dart';
 import 'package:loanapp/pages/languagepage.dart';
-import 'package:loanapp/pages/loanoffers.dart';
 import 'package:loanapp/pages/notifications.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,15 +15,16 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {    
     return Scaffold(
         appBar: AppBar(
           backgroundColor: MainColors.appbar,
           title: Center(
               child: Text(
             'Home',
-            style:  GoogleFonts.audiowide(
+            style: GoogleFonts.audiowide(
               color: Colors.white,
               fontSize: 25,
             ),
@@ -31,8 +32,10 @@ class HomePageState extends State<HomePage> {
           actions: [
             IconButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Notifications()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const Notifications()));
               },
               icon: const Icon(
                 Icons.notifications,
@@ -41,8 +44,10 @@ class HomePageState extends State<HomePage> {
             ),
             IconButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Languagepage()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const Languagepage()));
               },
               icon: const Icon(
                 Icons.language,
@@ -94,7 +99,8 @@ class HomePageState extends State<HomePage> {
                     child: Container(
                       decoration: BoxDecoration(
                           color: MainColors.containercolor,
-                          borderRadius: const BorderRadius.all(Radius.circular(20))),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20))),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
@@ -122,18 +128,24 @@ class HomePageState extends State<HomePage> {
                                     children: [
                                       // TextButton(onPressed: (){}, child:  Text('Check loan Offers'))
                                       ElevatedButton.icon(
+                                        style: ButtonStyle(
+                                            backgroundColor:
+                                                MaterialStatePropertyAll(
+                                                    MainColors.appbar)),
                                         onPressed: () {
                                           Navigator.push(
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      const Loanoffers()));
+                                                      const Applyloann()));
                                         },
                                         icon: const Icon(
-                                            Icons.monetization_on_outlined,color: Colors.black,),
+                                          Icons.monetization_on_outlined,
+                                          color: Colors.white,
+                                        ),
                                         label: const Text(
-                                          'Check loan Offers',
-                                          style: TextStyle(color: Colors.black),
+                                          'Apply loan',
+                                          style: TextStyle(color: Colors.white),
                                         ),
                                       )
                                     ],
@@ -147,11 +159,12 @@ class HomePageState extends State<HomePage> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(20),
                     child: Container(
                       decoration: BoxDecoration(
                           color: MainColors.containercolor,
-                          borderRadius: const BorderRadius.all(Radius.circular(20))),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20))),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -167,27 +180,160 @@ class HomePageState extends State<HomePage> {
                             children: [
                               const Padding(
                                 padding: EdgeInsets.all(20.0),
-                                child: Text('Check Your Credit Score',style: TextStyle(color: Colors.white),),
+                                child: Text(
+                                  'Check Your Credit Score',
+                                  style: TextStyle(color: Colors.white),
+                                ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: ElevatedButton.icon(
-                                onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => const Checkscore()));
-                                },
-                                icon: const Icon(Icons.arrow_forward_outlined,color: Colors.black,),
-                                label: const Text('Check Score',style: TextStyle(color: Colors.black),)),
+                                    style: ButtonStyle(
+                                        backgroundColor:
+                                            MaterialStatePropertyAll(
+                                                MainColors.appbar)),
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const Checkscore()));
+                                    },
+                                    icon: const Icon(
+                                      Icons.arrow_forward_outlined,
+                                      color: Colors.white,
+                                    ),
+                                    label: const Text(
+                                      'Check Score',
+                                      style: TextStyle(color: Colors.white),
+                                    )),
                               ),
                             ],
                           ),
-                          
                         ],
                       ),
                     ),
-                  )
+                  ),
+                  Padding(
+                    padding:  EdgeInsets.all(20),
+                    child: Container(
+                      // height: MediaQuery.of(context).size.height,
+                      // width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                        color: MainColors.containercolor,
+                      ),
+                      child: Padding(
+                        padding:  EdgeInsets.all(20),
+                        child: Column(                          
+                          children: <Widget>[
+                            Row(
+                              children: [
+                                RichText(
+                                    text: TextSpan(
+                                        text:
+                                            'Personal Loan - Instant Loan Online',
+                                        style: GoogleFonts.merriweather(
+                                          color: Colors.white,
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                        )))
+                              ],
+                            ),
+                            const Divider(
+                              endIndent: 200,
+                              color: Colors.grey,
+                            ),
+                            Row(
+                              children: <Widget>[
+                                Card(
+                                  child: Row(
+                                    children: [
+                                      Column(
+                                        children: [
+                                          Image.asset(
+                                            'images/coins.png',
+                                            height: 50,
+                                            width: 50,
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.all(8.0),
+                                            child: Text('Eligibility',
+                                            style: GoogleFonts.merriweather(),),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: TextButton(
+                                              style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(MainColors.lightcontainer)),
+                                                onPressed: () {},
+                                                child: Text("Know More>>",style: TextStyle(color: Colors.white),)),
+                                          )
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Card(
+                                  child: Row(
+                                    children: [
+                                      Column(
+                                        children: [
+                                          Image.asset(
+                                            'images/coins.png',
+                                            height: 50,
+                                            width: 50,
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.all(8.0),
+                                            child: Text('Interest Rate',
+                                            style: GoogleFonts.merriweather(),),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: TextButton(
+                                              style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(MainColors.lightcontainer)),
+                                                onPressed: () {},
+                                                child: Text("Know More>>",style: TextStyle(color: Colors.white),)),
+                                          )
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Card(
+                                  child: Row(
+                                    children: [
+                                      Column(
+                                        children: [
+                                          Image.asset(
+                                            'images/coins.png',
+                                            height: 50,
+                                            width: 50,
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Text('Documentations',
+                                            style: GoogleFonts.merriweather(),),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: TextButton(
+                                              style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(MainColors.lightcontainer)),
+                                                onPressed: () {},
+                                                child: Text("Know More>>",style: TextStyle(color: Colors.white),)),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),

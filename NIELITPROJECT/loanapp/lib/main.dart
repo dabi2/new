@@ -1,7 +1,12 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:loanapp/loginscreens/signin_screen.dart';
+import 'package:loanapp/pages/applyloann.dart';
 import 'pages/bottomnavigationbar.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
   runApp(const MainApp());
 }
 
@@ -17,7 +22,7 @@ class _MainAppState extends State<MainApp> {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Mybottomnavigationbar(),
+      home: SignInScreen(),
     );
   }
 }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "496975866686",
+    "project_id": "loanapplication-bbc95",
+    "storage_bucket": "loanapplication-bbc95.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496975866686:android:55fb9f57f9bf4ffc449a6f",
+        "android_client_info": {
+          "package_name": "com.example.loanapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApxTiBXQOXRCrstRTC88BEawVViWmhjUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
