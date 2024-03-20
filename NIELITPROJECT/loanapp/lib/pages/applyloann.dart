@@ -2,10 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loanapp/colors/color.dart';
+import 'package:loanapp/pages/bottomnavigationbar.dart';
 import 'package:loanapp/pages/drawer.dart';
+import 'package:loanapp/pages/homepage.dart';
 import 'package:loanapp/pages/languagepage.dart';
+import 'package:loanapp/pages/loanpage.dart';
 import 'package:loanapp/pages/notifications.dart';
 import 'dart:math';
+
+import 'package:loanapp/pages/profilepage.dart';
 
 class Applyloann extends StatefulWidget {
   const Applyloann({super.key});
@@ -15,6 +20,7 @@ class Applyloann extends StatefulWidget {
 }
 
 class _ApplyloannState extends State<Applyloann> {
+  
   final List _tenureTypes = ["Month(s)", "Year(s)"];
   String _tenureType = "Year(s)";
   String _emiResult = "";
@@ -65,6 +71,7 @@ class _ApplyloannState extends State<Applyloann> {
           ],
           elevation: 100,
         ),
+        bottomNavigationBar: Mybottomnavigationbar(),
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
