@@ -6,20 +6,22 @@ import 'package:loanapp/pages/profilepage.dart';
 // import 'package:loanapp/pages/applyloann.dart';
 // import 'pages/bottomnavigationbar.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   if (kIsWeb) {
-    Firebase.initializeApp(options: FirebaseOptions(apiKey: "AIzaSyBu12lTRt8atU312lnuxNAK0UcA7udERtI",
-  authDomain: "loanapplication-bbc95.firebaseapp.com",
-  projectId: "loanapplication-bbc95",
-  storageBucket: "loanapplication-bbc95.appspot.com",
-  messagingSenderId: "496975866686",
-  appId: "1:496975866686:web:4ca4fa07de0f2c2c449a6f",
-  measurementId: "G-R8QRY2WJQ3"));
-  }else {
-   await Firebase.initializeApp();
+    Firebase.initializeApp(
+        options: FirebaseOptions(
+            apiKey: "AIzaSyBu12lTRt8atU312lnuxNAK0UcA7udERtI",
+            authDomain: "loanapplication-bbc95.firebaseapp.com",
+            projectId: "loanapplication-bbc95",
+            storageBucket: "loanapplication-bbc95.appspot.com",
+            messagingSenderId: "496975866686",
+            appId: "1:496975866686:web:4ca4fa07de0f2c2c449a6f",
+            measurementId: "G-R8QRY2WJQ3"));
+  } else {
+    await Firebase.initializeApp();
   }
-  
+
   runApp(const MainApp());
 }
 
