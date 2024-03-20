@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:loanapp/loginscreens/signin_screen.dart';
+import 'package:loanapp/pages/bottomnavigationbar.dart';
 import 'package:loanapp/pages/profilepage.dart';
 // import 'package:loanapp/pages/applyloann.dart';
 // import 'pages/bottomnavigationbar.dart';
@@ -35,7 +36,7 @@ class _MainAppState extends State<MainApp> {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Profilepage(),
+      home: SignInScreen(),
     );
   }
 }
