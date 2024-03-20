@@ -9,7 +9,7 @@ TextField reusableTextField(String text, IconData icon, bool isPasswordType,
     enableSuggestions: !isPasswordType,
     autocorrect: !isPasswordType,
     cursorColor: Colors.amber,
-    style: TextStyle(color: Colors.white.withOpacity(0.9)),
+    style: TextStyle(color: Colors.black.withOpacity(0.9)),
     decoration: InputDecoration(
       prefixIcon: Icon(
         icon,
@@ -19,7 +19,7 @@ TextField reusableTextField(String text, IconData icon, bool isPasswordType,
       labelStyle: TextStyle(color: Colors.black.withOpacity(0.9)),
       filled: true,
       floatingLabelBehavior: FloatingLabelBehavior.never,
-      fillColor: Colors.blueGrey.withOpacity(0.9),
+      fillColor: const Color.fromARGB(255, 255, 255, 255).withOpacity(0.9),
       border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20.0),
           borderSide: const BorderSide(width: 0, style: BorderStyle.none)),
