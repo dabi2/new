@@ -15,8 +15,8 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
-  final TextEditingController _emailTextController = TextEditingController();
-  final TextEditingController _passwordTextController = TextEditingController();
+  TextEditingController _emailTextController = TextEditingController();
+  TextEditingController _passwordTextController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,18 +34,18 @@ class _SignInScreenState extends State<SignInScreen> {
               children: <Widget>[
                 Image.asset(
                   "images/loginimage.png",
-                  height: 300,
+                  height: 250,
                   width: 200,
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 20,
                 ),
                 reusableTextField("Enter Username", Icons.person_2, false,
                     _emailTextController),
-                const SizedBox(
+                SizedBox(
                   height: 20,
                 ),
-                reusableTextField("Enter Password", Icons.lock_outline, true,
+                reusableTextField("Password", Icons.lock_outline, true,
                     _passwordTextController),
                 const SizedBox(
                   height: 20,
@@ -59,7 +59,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const Mybottomnavigationbar()))
+                                builder: (context) => Mybottomnavigationbar()))
                         .onError((error, stackTrace) {
                       print(
                           "Either email or Password is invalid ${error.toString()}");
