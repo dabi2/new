@@ -2,8 +2,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:loanapp/loginscreens/signin_screen.dart';
-import 'package:loanapp/pages/applyloann.dart';
-import 'pages/bottomnavigationbar.dart';
+import 'package:loanapp/pages/profilepage.dart';
+// import 'package:loanapp/pages/applyloann.dart';
+// import 'pages/bottomnavigationbar.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,7 +35,7 @@ class _MainAppState extends State<MainApp> {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignInScreen(),
+      home: Profilepage(),
     );
   }
 }

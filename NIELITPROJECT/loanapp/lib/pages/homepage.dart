@@ -215,16 +215,16 @@ class HomePageState extends State<HomePage> {
                     ),
                   ),
                   Padding(
-                    padding:  EdgeInsets.all(20),
+                    padding:  const EdgeInsets.all(20),
                     child: Container(
                       // height: MediaQuery.of(context).size.height,
                       // width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                        borderRadius: const BorderRadius.all(Radius.circular(20)),
                         color: MainColors.containercolor,
                       ),
                       child: Padding(
-                        padding:  EdgeInsets.all(20),
+                        padding:  const EdgeInsets.all(20),
                         child: Column(                          
                           children: <Widget>[
                             Row(
@@ -257,7 +257,7 @@ class HomePageState extends State<HomePage> {
                                             width: 50,
                                           ),
                                           Padding(
-                                            padding: EdgeInsets.all(8.0),
+                                            padding: const EdgeInsets.all(8.0),
                                             child: Text('Eligibility',
                                             style: GoogleFonts.merriweather(),),
                                           ),
@@ -266,7 +266,7 @@ class HomePageState extends State<HomePage> {
                                             child: TextButton(
                                               style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(MainColors.lightcontainer)),
                                                 onPressed: () {},
-                                                child: Text("Know More>>",style: TextStyle(color: Colors.white),)),
+                                                child: const Text("Know More>>",style: TextStyle(color: Colors.white),)),
                                           )
                                         ],
                                       ),
@@ -284,7 +284,7 @@ class HomePageState extends State<HomePage> {
                                             width: 50,
                                           ),
                                           Padding(
-                                            padding: EdgeInsets.all(8.0),
+                                            padding: const EdgeInsets.all(8.0),
                                             child: Text('Interest Rate',
                                             style: GoogleFonts.merriweather(),),
                                           ),
@@ -293,7 +293,7 @@ class HomePageState extends State<HomePage> {
                                             child: TextButton(
                                               style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(MainColors.lightcontainer)),
                                                 onPressed: () {},
-                                                child: Text("Know More>>",style: TextStyle(color: Colors.white),)),
+                                                child: const Text("Know More>>",style: TextStyle(color: Colors.white),)),
                                           )
                                         ],
                                       ),
@@ -320,7 +320,7 @@ class HomePageState extends State<HomePage> {
                                             child: TextButton(
                                               style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(MainColors.lightcontainer)),
                                                 onPressed: () {},
-                                                child: Text("Know More>>",style: TextStyle(color: Colors.white),)),
+                                                child: const Text("Know More>>",style: TextStyle(color: Colors.white),)),
                                           ),
                                         ],
                                       ),

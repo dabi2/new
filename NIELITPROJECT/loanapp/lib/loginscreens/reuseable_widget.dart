@@ -8,21 +8,21 @@ TextField reusableTextField(String text, IconData icon, bool isPasswordType,
     obscureText: isPasswordType,
     enableSuggestions: !isPasswordType,
     autocorrect: !isPasswordType,
-    cursorColor: Colors.amber,
-    style: TextStyle(color: Colors.white.withOpacity(0.9)),
+    cursorColor: Colors.black,
+    style: TextStyle(color: Colors.black.withOpacity(0.9)),
     decoration: InputDecoration(
       prefixIcon: Icon(
         icon,
-        color: Colors.white,
+        color: Colors.black,
       ),
       labelText: text,
-      labelStyle: TextStyle(color: Colors.white.withOpacity(0.9)),
+      labelStyle: TextStyle(color: Colors.black.withOpacity(0.9)),
       filled: true,
       floatingLabelBehavior: FloatingLabelBehavior.never,
-      fillColor: Colors.white.withOpacity(0.9),
+      fillColor: Colors.blueGrey.withOpacity(0.9),
       border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20.0),
-          borderSide: BorderSide(width: 0, style: BorderStyle.none)),
+          borderSide: const BorderSide(width: 0, style: BorderStyle.none)),
     ),
     keyboardType: isPasswordType
         ? TextInputType.visiblePassword
@@ -44,11 +44,6 @@ Container signInSignupButton(
       onPressed: () {
         onTap();
       },
-      child: Text(
-        isLogin ? "LOG IN" : "SIGN UP",
-        style: TextStyle(
-            color: Colors.black, fontWeight: FontWeight.bold, fontSize: 16),
-      ),
       style: ButtonStyle(
           backgroundColor: MaterialStateProperty.resolveWith((states) {
             if (states.contains(MaterialState.pressed)) {
@@ -58,6 +53,11 @@ Container signInSignupButton(
           }),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)))),
+      child: Text(
+        isLogin ? "LOG IN" : "Register Now",
+        style: const TextStyle(
+            color: Colors.black, fontWeight: FontWeight.bold, fontSize: 16),
+      ),
     ),
   );
 }

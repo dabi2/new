@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loanapp/colors/color.dart';
 import 'package:loanapp/loginscreens/reuseable_widget.dart';
@@ -14,8 +15,8 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
-  TextEditingController _emailTextController = TextEditingController();
-  TextEditingController _passwordTextController = TextEditingController();
+  final TextEditingController _emailTextController = TextEditingController();
+  final TextEditingController _passwordTextController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,17 +37,17 @@ class _SignInScreenState extends State<SignInScreen> {
                   height: 300,
                   width: 200,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 reusableTextField("Enter Username", Icons.person_2, false,
                     _emailTextController),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 reusableTextField("Enter Password", Icons.lock_outline, true,
                     _passwordTextController),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 signInSignupButton(context, true, () {
@@ -58,7 +59,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => Mybottomnavigationbar()))
+                                builder: (context) => const Mybottomnavigationbar()))
                         .onError((error, stackTrace) {
                       print(
                           "Either email or Password is invalid ${error.toString()}");
@@ -85,14 +86,10 @@ class _SignInScreenState extends State<SignInScreen> {
         GestureDetector(
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => SignupScreen()));
+                MaterialPageRoute(builder: (context) => const SignupScreen()));
           },
-          child: Text(
-            " SIGN UP",
-            style: GoogleFonts.merriweather(
-                color: Colors.white, fontWeight: FontWeight.bold),
-          ),
-        )
+          child: Text(" Register Now",style: GoogleFonts.merriweather(color:Colors.blue[400],fontWeight:FontWeight.bold,),),
+        ),
       ],
     );
   }
