@@ -106,7 +106,7 @@ class _ProfilepageState extends State<Profilepage> {
                     fontWeight:FontWeight.bold,
                   ),),
                   const Divider(
-                    endIndent: 500,
+                    endIndent: 50,
                     color: Colors.blueGrey,
                   ),
                   const SizedBox(
