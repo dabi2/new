@@ -89,7 +89,7 @@ class _ProfilepageState extends State<Profilepage> {
                     style: GoogleFonts.merriweather(color:Colors.black,fontWeight:FontWeight.bold,fontSize:20),
                   ),
                   // ₹
-                  Text("Your Total Loan Amount is: \u20B910,000",style:GoogleFonts.merriweather(color:Colors.black,fontWeight:FontWeight.bold,),)
+                  Text("Your Total Loan Amount is: \u20B9 10,000",style:GoogleFonts.merriweather(color:Colors.black,fontWeight:FontWeight.bold,),)
                 ],
               ),
               const Divider(
