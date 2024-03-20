@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loanapp/colors/color.dart';
 import 'package:loanapp/loginscreens/reuseable_widget.dart';
@@ -17,6 +16,7 @@ class SignInScreen extends StatefulWidget {
 class _SignInScreenState extends State<SignInScreen> {
   TextEditingController _emailTextController = TextEditingController();
   TextEditingController _passwordTextController = TextEditingController();
+  bool _loading = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,12 +37,19 @@ class _SignInScreenState extends State<SignInScreen> {
                   height: 250,
                   width: 200,
                 ),
-                SizedBox(
+                _loading
+                    ? const Center(child: CircularProgressIndicator())
+                    : SizedBox(),
+                const SizedBox(
                   height: 20,
                 ),
-                reusableTextField("Enter Username", Icons.person_2, false,
-                    _emailTextController),
-                SizedBox(
+                reusableTextField(
+                  "Email",
+                  Icons.person_2,
+                  false,
+                  _emailTextController,
+                ),
+                const SizedBox(
                   height: 20,
                 ),
                 reusableTextField("Password", Icons.lock_outline, true,
@@ -51,20 +58,71 @@ class _SignInScreenState extends State<SignInScreen> {
                   height: 20,
                 ),
                 signInSignupButton(context, true, () {
-                  FirebaseAuth.instance
-                      .signInWithEmailAndPassword(
-                          email: _emailTextController.text,
-                          password: _passwordTextController.text)
-                      .then((value) {
-                    Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Mybottomnavigationbar()))
-                        .onError((error, stackTrace) {
-                      print(
-                          "Either email or Password is invalid ${error.toString()}");
-                    });
+                  // Show CircularProgressIndicator when signing in
+                  setState(() {
+                    _loading = true;
                   });
+
+                  try {
+                    FirebaseAuth.instance
+                        .signInWithEmailAndPassword(
+                            email: _emailTextController.text,
+                            password: _passwordTextController.text)
+                        .then((value) {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const Mybottomnavigationbar()));
+                    }).catchError((error) {
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: const Text('Error'),
+                            content: Text(error.toString()),
+                            actions: <Widget>[
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                                child: const Text('Retry'),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    }).whenComplete(() {
+                      // Hide CircularProgressIndicator after sign-in attempt is finished
+                      setState(() {
+                        _loading = false;
+                      });
+                    });
+                  } catch (e) {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          title: const Text('Error'),
+                          content: Text(e.toString()),
+                          actions: <Widget>[
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: const Text('OK'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                    print("Error during sign in: ${e.toString()}");
+
+                    // Hide CircularProgressIndicator if an error occurs
+                    setState(() {
+                      _loading = false;
+                    });
+                  }
                 }),
                 signUpOption(),
               ],
@@ -86,10 +144,14 @@ class _SignInScreenState extends State<SignInScreen> {
         GestureDetector(
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const SignupScreen()));
+                MaterialPageRoute(builder: (context) => SignupScreen()));
           },
-          child: Text(" Register Now",style: GoogleFonts.merriweather(color:Colors.blue[400],fontWeight:FontWeight.bold,),),
-        ),
+          child: Text(
+            " SIGN UP",
+            style: GoogleFonts.merriweather(
+                color: Colors.white, fontWeight: FontWeight.bold),
+          ),
+        )
       ],
     );
   }
