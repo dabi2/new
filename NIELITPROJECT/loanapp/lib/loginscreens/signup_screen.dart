@@ -13,13 +13,13 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
-  final TextEditingController _userNameTextController = TextEditingController();
+  // final TextEditingController _userNameTextController = TextEditingController();
   final TextEditingController _emailTextController = TextEditingController();
   final TextEditingController _passwordTextController = TextEditingController();
-  final TextEditingController _panNumberTextController = TextEditingController();
-  final TextEditingController _accountNumberTextController = TextEditingController();
+  // final TextEditingController _panNumberTextController = TextEditingController();
+  // final TextEditingController _accountNumberTextController = TextEditingController();
   // final TextEditingController _nomineeNameNumberTextController = TextEditingController();
-  final TextEditingController _addressTextController = TextEditingController();
+  // final TextEditingController _addressTextController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -48,11 +48,11 @@ class _SignupScreenState extends State<SignupScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                reusableTextField("Full Name", Icons.person_2, false,
-                    _userNameTextController),
-                const SizedBox(
-                  height: 20,
-                ),
+                // reusableTextField("Full Name", Icons.person_2, false,
+                //     _userNameTextController),
+                // const SizedBox(
+                //   height: 20,
+                // ),
                 reusableTextField(
                     "Email", Icons.mail, false, _emailTextController),
                 const SizedBox(
@@ -60,21 +60,21 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
                 reusableTextField("Password", Icons.lock_outline, true,
                     _passwordTextController),
-                const SizedBox(
-                  height: 20,
-                ),
-                reusableTextField("Address", Icons.location_on, false,
-                    _addressTextController),
-                const SizedBox(
-                  height: 20,
-                ),
-                reusableTextField("Pan Number", Icons.card_travel, false,
-                    _panNumberTextController),
-                const SizedBox(
-                  height: 20,
-                ),
-                reusableTextField("Account Number", Icons.account_balance_sharp,
-                    false, _accountNumberTextController),
+                // const SizedBox(
+                //   height: 20,
+                // ),
+                // reusableTextField("Address", Icons.location_on, false,
+                //     _addressTextController),
+                // const SizedBox(
+                //   height: 20,
+                // ),
+                // reusableTextField("Pan Number", Icons.card_travel, false,
+                //     _panNumberTextController),
+                // const SizedBox(
+                //   height: 20,
+                // ),
+                // reusableTextField("Account Number", Icons.account_balance_sharp,
+                //     false, _accountNumberTextController),
                 const SizedBox(
                   height: 20,
                 ),

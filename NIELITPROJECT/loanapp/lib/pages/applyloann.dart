@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loanapp/colors/color.dart';
+import 'package:loanapp/pages/Apply_page/registrations.dart';
 import 'package:loanapp/pages/bottomnavigationbar.dart';
 import 'package:loanapp/pages/drawer.dart';
 import 'package:loanapp/pages/homepage.dart';
@@ -71,7 +72,6 @@ class _ApplyloannState extends State<Applyloann> {
           ],
           elevation: 100,
         ),
-        bottomNavigationBar: Mybottomnavigationbar(),
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
@@ -240,7 +240,9 @@ class _ApplyloannState extends State<Applyloann> {
                                     ],
                                   ),
                                   ElevatedButton.icon(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(context,MaterialPageRoute(builder: (context) => RegistrationLoan()));
+                                      },
                                       style: ButtonStyle(
                                           shape: MaterialStateProperty.all<
                                               RoundedRectangleBorder>(
